@@ -2,11 +2,11 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import Button from "./Button"
 
-const Header = ({ title, onClick }) => {
+const Header = ({ title, onAdd, showAdd }) => {
     return (
         <header className="header">
             <Title>{title}</Title>
-            <Button color="green" text="Add" onClick={onClick} />
+            <Button color={showAdd ? 'red' : 'green'} text={showAdd ? 'Close' : 'Add'} onClick={onAdd} />
         </header>
     )
 }
